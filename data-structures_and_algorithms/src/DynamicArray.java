@@ -66,4 +66,18 @@ public class DynamicArray {
 		arr = Arrays.copyOf(arr, capacity);
 
 	}
+
+	public int get(int position) {
+		return arr[position];
+	}
+
+	public int size() {
+		return size;
+	}
+
+	public void update(int position, int value) {
+		int previousVal = arr[position];
+		arr[position] = value;
+		System.out.println("Value updated from " + previousVal + " to " + value + " at pos: " + position);
+	}
 }

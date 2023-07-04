@@ -12,7 +12,10 @@ public class ArrayToListImpl {
 				System.out.println("2. Display the List");
 				System.out.println("3. Insert an Element in a particular position");
 				System.out.println("4. Delete an Element");
-				System.out.println("6. Exit...");
+				System.out.println("5. Update an Element");
+				System.out.println("6. Get an Element");
+				System.out.println("7. Size of the List");
+				System.out.println("8. Exit");
 				int option = sc.nextInt();
 
 				switch (option) {
@@ -37,9 +40,25 @@ public class ArrayToListImpl {
 					position = sc.nextInt();
 					list.delete(position);
 					break;
+
 				case 5:
-					System.exit(0);
+					System.out.println("Enter the position to be updated");
+					position = sc.nextInt();
+					System.out.println("Enter the value to be updated");
+					value = sc.nextInt();
+					list.update(position, value);
 					break;
+				case 6:
+					System.out.println("Enter the position to be fetched");
+					position = sc.nextInt();
+					System.out.println("Value="+list.get(position));
+					break;
+				case 7:
+					System.out.println("Size=" + list.size());
+					break;
+				case 8:
+					System.out.println("Program Closed!!! Thanks...");
+					System.exit(0);
 
 				default:
 					System.out.println("Invalid Option");
@@ -47,5 +66,6 @@ public class ArrayToListImpl {
 				}
 			}
 		}
+
 	}
 }
